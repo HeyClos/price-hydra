@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from './logo.svg';
 import './App.css';
-
-import Prices from "./Prices";
+import axios from 'axios';
 
 // The REST API endpoint
 const API_URL = 'https://jsonplaceholder.typicode.com/posts';
@@ -42,7 +41,6 @@ function App() {
         <p>
           Price data to be rendered below.
         </p>
-        <Prices prices={priceData} updatePrices={setPriceData} />
         {posts.length > 0 ? (
           <div className="content">
             {posts.map((post) => (
