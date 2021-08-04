@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import { Puppeteer } from "puppeteer";
+
 //const puppeteer = require('puppeteer');
 
 const Prices = () => {
